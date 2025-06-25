@@ -1,1 +1,15 @@
+name: Print Secret Environment Variable
 
+on:
+  workflow_dispatch:  # Allows manual run from GitHub UI
+
+jobs:
+  print-secret:
+    runs-on: ubuntu-latest
+
+    env:
+      SOME_SECRET: ${{ secrets.SOME_SECRET }}
+
+    steps:
+      - name: Print secret env variable (for test purposes only)
+        run: echo "SOME_SECRET = $SOME_SECRET"
