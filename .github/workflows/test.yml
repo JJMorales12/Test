@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - name: Print secret env variable (for test purposes only)
-        run: "$SOME_SECRET"
+        run: $SOME_SECRET
       - run: printenv
       - run: env
